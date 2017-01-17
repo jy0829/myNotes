@@ -3,15 +3,16 @@
 1. File maniputation: 
 #include <stdio.h> 
 FILE *fp = fopen(filename); 
- if (fp == NULL) error (1,0, "error message); 
- int ch = getc(fp); 
- ch != EOF 
- fclose(fp); 
+if (fp == NULL) error (1,0, "error message); 
+int ch = getc(fp); 
+ch != EOF 
+fclose(fp); 
  
 Readline: 
     char line[max_line]; 
     while( fgets(line, sizeof(line), fp) != NULL) printf("%s", line); 
-  // if line is defined as char*, sizeof(line) returns 8. if char[] line = "…", sizeof(line) returns the number of characters 
+  // if line is defined as char*, sizeof(line) returns 8. 
+  // if char[] line = "…", sizeof(line) returns the number of characters 
  
 2. Unix command 
 Grep –r(recursive) -i (case insensitive) 
@@ -49,7 +50,6 @@ printf("Name: %s\tAge:%d\tHeight:%d\n", name, age, height);
 
 
 # Lecture 3
-
 1. Error 
 #include <stdbool.h>  // bool is not standard 
 #inlcude <error.h> 
